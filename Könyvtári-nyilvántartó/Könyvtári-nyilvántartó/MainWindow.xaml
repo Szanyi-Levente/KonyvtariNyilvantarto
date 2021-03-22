@@ -10,6 +10,7 @@
         <TabControl>
             <TabItem Name="Konyvek" Header="Könyvek" Height="22" VerticalAlignment="Bottom" Loaded="Konyvek_Loaded">
                 <DockPanel>
+                    <TextBox x:Name="Szoveg" Height="51" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Szoveg_TextChanged"/>
                     <DataGrid x:Name="Konyv">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="KönyvId" Binding="{Binding id}">
@@ -21,6 +22,7 @@
                             <DataGridTextColumn Header="True" Binding="{Binding ig}"></DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
+                    
                 </DockPanel>
             </TabItem>
             <TabItem Name="Tagok" Header="Tagok" Loaded="Tagok_Loaded">

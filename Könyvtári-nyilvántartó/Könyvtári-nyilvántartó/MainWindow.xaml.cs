@@ -123,5 +123,18 @@ namespace Könyvtári_nyilvántartó
             Kolcson.ItemsSource = l3;
             Kolcson.AutoGenerateColumns = false;
         }
+
+        private void Szoveg_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var keres = l.Where(x => x.cim.Contains(Szoveg.Text));
+            if (Szoveg.Text == null)
+            {
+                Konyv.ItemsSource = l;
+            }
+            else
+            {
+                Konyv.ItemsSource = keres;
+            }
+        }
     }
 }
